@@ -1,0 +1,46 @@
+.Dashboard__sidebar {
+  border-right: 1px solid var(--sidebar-border-color);
+  background-color: var(--sidebar-background-color);
+  @apply w-full;
+  @apply fixed;
+  @apply flex;
+  @apply flex-col;
+
+  bottom: 0px;
+  left: 0px;
+  top: 0px;
+}
+
+.Dashboard__sidebar__header {
+  @apply overflow-hidden;
+  @apply flex-shrink-0;
+  @apply p-2;
+}
+
+.Dashboard__sidebar__header >:first-child {
+  border-bottom: 1px solid var(--sidebar-border-color);
+  @apply items-center;
+  @apply h-full ;
+  @apply flex;
+}
+
+.Dashboard__sidebar__menu {
+  @apply overflow-x-hidden;
+  @apply overflow-y-auto;
+  @apply flex-grow;
+  @apply flex-col;
+  @apply flex;
+}
+
+.Dashboard__sidebar__menu >:first-child {
+  border-right: 5px solid var(--sidebar-border-color);
+  @apply cursor-pointer;
+  @apply justify-start;
+  @apply items-center;
+
+  @apply w-full;
+  @apply mt-6;
+  @apply flex;
+  @apply px-3;
+  @apply py-5;
+}

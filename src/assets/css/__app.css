@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+@import "theme.css";
+
+/* -- Overrides for tailwinds base -- */
+body {
+  font-family: var(--font);
+  color: var(--dashboard-color);
+  background-color: var(--dashboard-background-color);
+}
+
+.bg-card {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--border-color);
+}
+
+button:disabled { opacity: var(--disabled-opacity); }
+button:last-of-type:hover:not(:disabled) path:last-of-type { fill: var(--white); }
+button:hover:not(:disabled):not(:last-of-type) path { stroke: var(--white); }
+
+.code {
+  background-color: var(--dashboard-color);
+  color: var(--black);
+  @apply px-1;
+  @apply rounded;
+}
+
+.btn-primary,
+.btn-secondary {
+  background-color: var(--sidebar-background-color);
+  @apply shadow-md;
+  @apply py-2;
+  @apply px-4;
+  @apply ml-2;
+}
+
+.btn-secondary { background-color: var(--black); margin: 0; }
+.Input--error:focus { 
+  border-bottom-color: var(--error);
+  background-color: var(--error);
+  outline: 1px solid var(--error);
+}

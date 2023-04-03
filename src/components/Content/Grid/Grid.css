@@ -1,0 +1,97 @@
+.Grid {
+  @apply flex-col;
+  @apply relative;
+  @apply h-full;
+  @apply flex;
+}
+
+.Grid__container {
+  @apply max-w-7xl;
+  @apply flex-col;
+  @apply mx-auto;
+  @apply w-full;
+  @apply flex;
+}
+
+.Grid__container__header {
+  @apply items-center;
+  @apply justify-end;
+  @apply flex;
+  @apply py-2;  
+}
+
+.Grid__container__header i {
+  margin-right: 0.75rem;
+  border: 1px solid;
+  display: inherit;
+  height: 1.25rem;
+  width: 1px;
+}
+
+.Grid__action {
+  @apply justify-center;
+  @apply items-center;
+  @apply flex;
+  @apply mr-3;
+
+  width: 2rem;
+}
+
+.Grid__search,
+.Grid__input {
+  background-color: var(--sidebar-background-color);
+  border-bottom: 1px solid var(--border-color);
+  min-width: 300px;
+
+  @apply appearance-none;
+  @apply leading-tight;
+  @apply py-2;
+  @apply px-2;
+  @apply mr-2;
+}
+
+.Grid__input {
+  @apply ml-3;
+}
+
+.Grid__search:focus,
+.Grid__input:focus {
+  background-color: var(--focus-background-color);
+  outline: 1px solid var(--border-color);
+  border-bottom-color: transparent;
+}
+
+.Grid table thead th,
+.Grid table tbody td {
+  background-color: var(--focus-background-color);
+  border: 1px solid var(--border-color);
+  color: var(--accent-color);
+}
+
+.Grid table tbody td { background-color: initial; }
+.Grid table thead th:first-of-type, .Grid table tbody td:first-of-type { border-left: none; }
+.Grid table thead th:last-of-type, .Grid table tbody td:last-of-type  { border-right: none; }
+
+
+.Popup {
+  background-color: var(--card-background-color);
+  border: 1px solid var(--border-color);
+  position: absolute;
+  display: block;
+  right: 0.25rem;
+  top: 0.25rem;
+  width: 25rem;
+
+  @apply p-4;
+}
+
+.Popup .Grid__input {
+  margin: 0;
+  @apply mb-1;
+  min-width: 220px;
+}
+
+label {
+  width: 30%;
+  display: inline-block;
+}

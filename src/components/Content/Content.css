@@ -1,0 +1,8 @@
+.Section {
+  @apply w-full;
+  @apply p-1; 
+}
+
+.Section .bg-card:last-of-type {
+  border-bottom-color: transparent;
+}

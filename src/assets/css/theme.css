@@ -1,0 +1,22 @@
+/* Creating this file to illustrate a pattern for defining variables for all the colors used */
+:root {
+  --white: #ffffff;
+  --black: #000000;
+  --gray: #333333;
+  --error: #dd0000;
+  --light-gray: #dedede;
+
+  --font: 'Open Sans', sans-serif;
+
+  --dashboard-background-color: #303438;
+  --dashboard-color: #99a5b4;
+  --border-color: #5c6e81;
+  --accent-color: #a6b4c1;
+
+  --sidebar-background-color: #282828;
+  --sidebar-border-color: #3F3F3F;
+
+  --card-background-color: #36404a;
+  --focus-background-color: #414d59;
+  --disabled-opacity: 0.25;
+}

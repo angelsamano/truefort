@@ -1,18 +1,28 @@
-# Getting Started with Create React App
+# Getting Started with this code challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).\
+But because I wanted to expose the webpack.config and tailwindcss and jest files, I ran the `npm run eject` command
 
-## Available Scripts
+### What will you need (first)?
+The pre-requisities for running this application are very straightforward:
 
-In the project directory, you can run:
+- [Node](https://nodejs.org/en/download)
+- [NPM](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)
 
-### `npm start`
+This application was created using Node v14.17.2 and NPM v6.14.13.\
+If you don't have those please install them using the provided links.\
+_NOTE: The provided versions are just informative_
 
+
+
+
+### Available Scripts
+Pretty much the basic scripts for a CRA application:
+
+#### `npm start`
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.\
+The page will reload on any changes made; also exposes any lint or execution errors to the console.
 
 ### `npm test`
 

@@ -306,19 +306,22 @@ module.exports = function (webpackEnv) {
       // https://github.com/facebook/create-react-app/issues/290
       // `web` extension prefixes have been added for better support
       // for React Native Web.
-      extensions: paths.moduleFileExtensions
-        .map(ext => `.${ext}`)
-        .filter(ext => useTypeScript || !ext.includes('ts')),
+      extensions: paths.moduleFileExtensions.map(ext => `.${ext}`).filter(ext => useTypeScript || !ext.includes('ts')),
       alias: {
-        // Support React Native Web
-        // https://www.smashingmagazine.com/2016/08/a-glimpse-into-the-future-with-react-native-for-web/
-        'react-native': 'react-native-web',
+        '@css': path.resolve(__dirname, '../src/assets/css/'),
+        '@images': path.resolve(__dirname, '../src/assets/img/'),
+        '@services': path.resolve(__dirname, '../src/services/'),
+        '@components': path.resolve(__dirname, '../src/components/'),
+        
+        
+
+        //'react-native': 'react-native-web',
         // Allows for better profiling with ReactDevTools
+        ...(modules.webpackAliases || {}),
         ...(isEnvProductionProfile && {
           'react-dom$': 'react-dom/profiling',
           'scheduler/tracing': 'scheduler/tracing-profiling',
-        }),
-        ...(modules.webpackAliases || {}),
+        })
       },
       plugins: [
         // Prevents users from importing files from outside of src/ (or node_modules/).

@@ -45,4 +45,21 @@ This command will remove the single build dependency from your project.
 3. Once dependencies are installed, run `npm start` — a browser tab will be open with the application
 
 ## How this application works?
+The application will show you a dashboard — It is actually responsive and it is ussing [tailwindcss](https://tailwindcss.com/).\
+But also is using a "theme" approach, very basic but there is one! ([src/assets/css/theme.css](https://github.com/angelsamano/truefort/blob/main/src/assets/css/theme.css))
+<img width="800" alt="UI" src="https://user-images.githubusercontent.com/7455604/229587165-acbbf573-6256-4464-9d00-0d5ea8331c53.png">
+
+It uses a [ContextProvider](https://github.com/angelsamano/truefort/blob/main/src/services/ContextProvider.jsx) and simulates an API-provided object, you can see it in the [src/services/MockedAuthenticatedUser.js](https://github.com/angelsamano/truefort/blob/main/src/services/MockedAuthenticatedUser.js) file.\
+Please be aware that all the data you add, update or delete will persist because it is using LocalStorage (see [src/services/Storage.jsx](https://github.com/angelsamano/truefort/blob/main/src/services/Storage.jsx)) — if you want to reset the application you can press the "refresh" button, see this screen recording for guidance:\
 TBA
+
+### Why I can only edit one record at the time if I select multiple rows?
+This is intended; decided to implement this way since the "bulk edit" is not recommended, see this screen recording to see what it means.\
+TBA
+
+### Why the User ID field gets highlighted in red when I enter a value?
+UserId must be unique; the application will not allow duplications.\
+TBA
+
+
+NOTES: This application was created with the "performance first" mindset, you can see couple of `useRef()` and [useMemo](https://github.com/angelsamano/truefort/blob/main/src/components/Content/Grid/Grid.jsx#L20) hooks instead of the regular `useState` — this because something that does not change often should not rendered again to the app
